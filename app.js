@@ -60,8 +60,7 @@ app.use(function(err, req, res, next) {
   });
 });
 
-analytics.page(); 
-analytics.page("Retail Page","Home",);
+// analytics.page("Retail Page","Home",);
 
 
 analytics.identify({
