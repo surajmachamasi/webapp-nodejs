@@ -9,6 +9,10 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+var Analytics = require('analytics-node');
+var analytics = new Analytics('xGf4XuY3E1dkpRkNv4jooevlFyDkWePt');
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -55,6 +59,36 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
+
+analytics.identify({
+  userId:'f4ca124298',
+  traits: {
+    name: 'Michael Bolton',
+    email: 'mbolton@example.com',
+    createdAt: new Date('2014-06-14T02:00:19.467Z')
+  }
+});
+
+
+analytics.track({
+  userId:'f4ca124298',
+  event: 'Signed Up',
+  properties: {
+    plan: 'Enterprise'
+  }
+});
+
+analytics.track({
+  userId:'f4ca124298',
+  event: 'Bookmarked Article',
+  properties: {
+    title: 'Snow Fall',
+    subtitle: 'The Avalanche at Tunnel Creek',
+    author: 'John Branch'
+  }
+});
+
+
 
 
 module.exports = app;
