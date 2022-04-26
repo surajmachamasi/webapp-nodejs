@@ -10,7 +10,7 @@ var users = require('./routes/users');
 
 var app = express();
 var Analytics = require('analytics-node');
-var analytics = new Analytics('xGf4XuY3E1dkpRkNv4jooevlFyDkWePt');
+var analytics = new Analytics('4LAQ0uuBRgepNmC0DSpbg2YVDrJC8Q7y');
 
 
 
@@ -60,8 +60,6 @@ app.use(function(err, req, res, next) {
   });
 });
 
-// analytics.page("Retail Page","Home",);
-
 
 analytics.identify({
   userId:'f4ca124298',
@@ -81,15 +79,43 @@ analytics.track({
   }
 });
 
-analytics.track({
-  userId:'f4ca124298',
-  event: 'Bookmarked Article',
-  properties: {
-    title: 'Snow Fall',
-    subtitle: 'The Avalanche at Tunnel Creek',
-    author: 'John Branch'
-  }
-});
+// analytics.track({
+//   userId:'f4ca124298',
+//   event: 'Bookmarked Article',
+//   properties: {
+//     title: 'Snow Fall',
+//     subtitle: 'The Avalanche at Tunnel Creek',
+//     author: 'John Branch'
+//   }
+// });
+
+
+// analytics.identify("97980cfea0067", {
+//   name: "Peter Gibbons",
+//   email: "peter@example.com",
+//   plan: "premium",
+//   logins: 5
+// });
+
+
+// analytics.identify('97980cfea0085', {
+//   email: 'suraj@berrybytes.com',
+//   name: 'Suraj Neyos'
+// });
+
+// analytics.track("User Registered", {
+//   checkinDate: new Date(),
+//   myCoolProperty: "mYCoolProperty",
+// });
+
+
+// analytics.group("0e8c78ea9d9dsasahjg", {
+//   name: "My_group_name",
+//   employees: 3,
+//   plan: "enterprise",
+//   industry: "Technology"
+// });
+
 
 
 
