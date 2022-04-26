@@ -61,14 +61,14 @@ app.use(function(err, req, res, next) {
 });
 
 analytics.page(); 
-analytics.page("Retail Page","Home");
+analytics.page("Retail Page","Home",);
 
 
 analytics.identify({
   userId:'f4ca124298',
   traits: {
-    name: 'Michael Bolton',
-    email: 'mbolton@example.com',
+    name: 'Suraj Neyos',
+    email: 'Suraj.machamasi@berrybytes.com',
     createdAt: new Date('2014-06-14T02:00:19.467Z')
   }
 });
