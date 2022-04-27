@@ -1,0 +1,35 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+      {
+          "Effect": "Allow",
+          "Action": [
+              "kinesis:PutRecord",
+              "kinesis:PutRecords",
+              "iam:SimulatePrincipalPolicy"
+          ],
+          "Resource": [
+              "arn:aws:kinesis:us-east-1:246153191045:stream/kinesisdata-stream"
+              
+          ]
+      }
+  ]
+}
+
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+      {
+          "Effect": "Allow",
+          "Action": [
+              "firehose:PutRecord"
+          ],
+          "Resource": [
+              "arn:aws:firehose:us-east-1:246153191045:deliverystream/KDS-S3-MXGKI"
+          ]
+      }
+  ]
+}
+
+
